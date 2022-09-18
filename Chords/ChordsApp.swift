@@ -1,6 +1,5 @@
 //
 //  ChordsApp.swift
-//  Chords
 //
 //  Created by hunter downey on 9/18/22.
 //

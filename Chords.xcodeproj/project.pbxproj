@@ -14,6 +14,12 @@
 		41F089FA28D704F1002555BA /* ChordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F089F928D704F1002555BA /* ChordsTests.swift */; };
 		41F08A0428D704F1002555BA /* ChordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F08A0328D704F1002555BA /* ChordsUITests.swift */; };
 		41F08A0628D704F1002555BA /* ChordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F08A0528D704F1002555BA /* ChordsUITestsLaunchTests.swift */; };
+		41F08A1528D7051F002555BA /* guitar.json in Resources */ = {isa = PBXBuildFile; fileRef = 41F08A1328D7051F002555BA /* guitar.json */; };
+		41F08A1628D7051F002555BA /* ukulele.json in Resources */ = {isa = PBXBuildFile; fileRef = 41F08A1428D7051F002555BA /* ukulele.json */; };
+		41F08A1C28D70537002555BA /* FretboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F08A1828D70537002555BA /* FretboardView.swift */; };
+		41F08A1D28D70537002555BA /* ChordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F08A1928D70537002555BA /* ChordsView.swift */; };
+		41F08A1E28D70537002555BA /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F08A1A28D70537002555BA /* Instrument.swift */; };
+		41F08A1F28D70537002555BA /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F08A1B28D70537002555BA /* Chord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		41F089FF28D704F1002555BA /* ChordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F08A0328D704F1002555BA /* ChordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsUITests.swift; sourceTree = "<group>"; };
 		41F08A0528D704F1002555BA /* ChordsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		41F08A1328D7051F002555BA /* guitar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guitar.json; sourceTree = "<group>"; };
+		41F08A1428D7051F002555BA /* ukulele.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ukulele.json; sourceTree = "<group>"; };
+		41F08A1828D70537002555BA /* FretboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FretboardView.swift; sourceTree = "<group>"; };
+		41F08A1928D70537002555BA /* ChordsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsView.swift; sourceTree = "<group>"; };
+		41F08A1A28D70537002555BA /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		41F08A1B28D70537002555BA /* Chord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +108,9 @@
 			children = (
 				41F089E828D704F0002555BA /* ChordsApp.swift */,
 				41F089EA28D704F0002555BA /* ContentView.swift */,
-				41F089EC28D704F0002555BA /* Assets.xcassets */,
+				41F08A1728D7052C002555BA /* Chords */,
 				41F089EE28D704F0002555BA /* Preview Content */,
+				41F089EC28D704F0002555BA /* Assets.xcassets */,
 			);
 			path = Chords;
 			sourceTree = "<group>";
@@ -125,6 +138,43 @@
 				41F08A0528D704F1002555BA /* ChordsUITestsLaunchTests.swift */,
 			);
 			path = ChordsUITests;
+			sourceTree = "<group>";
+		};
+		41F08A1228D7051F002555BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41F08A1328D7051F002555BA /* guitar.json */,
+				41F08A1428D7051F002555BA /* ukulele.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		41F08A1728D7052C002555BA /* Chords */ = {
+			isa = PBXGroup;
+			children = (
+				41F08A2028D705C8002555BA /* Models */,
+				41F08A2128D705EF002555BA /* Views */,
+				41F08A1228D7051F002555BA /* Resources */,
+			);
+			path = Chords;
+			sourceTree = "<group>";
+		};
+		41F08A2028D705C8002555BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41F08A1B28D70537002555BA /* Chord.swift */,
+				41F08A1A28D70537002555BA /* Instrument.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		41F08A2128D705EF002555BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41F08A1928D70537002555BA /* ChordsView.swift */,
+				41F08A1828D70537002555BA /* FretboardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				41F089F028D704F0002555BA /* Preview Assets.xcassets in Resources */,
+				41F08A1528D7051F002555BA /* guitar.json in Resources */,
 				41F089ED28D704F0002555BA /* Assets.xcassets in Resources */,
+				41F08A1628D7051F002555BA /* ukulele.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F08A1F28D70537002555BA /* Chord.swift in Sources */,
+				41F08A1E28D70537002555BA /* Instrument.swift in Sources */,
+				41F08A1D28D70537002555BA /* ChordsView.swift in Sources */,
 				41F089EB28D704F0002555BA /* ContentView.swift in Sources */,
 				41F089E928D704F0002555BA /* ChordsApp.swift in Sources */,
+				41F08A1C28D70537002555BA /* FretboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
