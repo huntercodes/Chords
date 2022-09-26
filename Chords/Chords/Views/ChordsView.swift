@@ -10,7 +10,9 @@ struct ChordsView: View {
     @State private var selectedInstrument: Instrument = .guitar
     @State private var selectedKey: String = "C"
     @State private var selectedSuffix: String = "major"
+    
     private let instruments = [Instrument.guitar, Instrument.ukulele]
+    
     private var foundChords: [Chord.Position] {
         selectedInstrument.findChordPositions(key: selectedKey, suffix: selectedSuffix)
     }
@@ -33,19 +35,20 @@ struct ChordsView: View {
             .background(
                 RoundedRectangle(cornerRadius: 7)
                     .fill(
-                        .black.gradient
+                        Color("backgroundColor").gradient
                     )
-                    .frame(maxHeight: 74)
+                    .frame(maxWidth: 300, maxHeight: 74)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 7)
                     .stroke(lineWidth: 1)
-                    .foregroundColor(.white)
-                    .frame(maxHeight: 74)
+                    .foregroundColor(Color("borderColor"))
+                    .frame(maxWidth: 300, maxHeight: 74)
             )
+            .frame(maxWidth: 300, maxHeight: 87)
             
             Spacer()
-                .frame(height: 23)
+                .frame(height: 7)
                 
             HStack {
                 Spacer()
@@ -65,14 +68,14 @@ struct ChordsView: View {
                         .background(
                             RoundedRectangle(cornerRadius: 7)
                                 .fill(
-                                    .black.gradient
+                                    Color("backgroundColor").gradient
                                 )
                                 .frame(maxWidth: 107, maxHeight: 34)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 7)
                                 .stroke(lineWidth: 1)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color("borderColor"))
                                 .frame(maxWidth: 107, maxHeight: 34)
                         )
                 }
@@ -90,18 +93,18 @@ struct ChordsView: View {
                     Text(selectedSuffix)
                         .frame(minWidth: 80)
                         .padding(7)
-                        .foregroundColor(.white)
+                        .foregroundColor(.primary)
                         .background(
                             RoundedRectangle(cornerRadius: 7)
                                 .fill(
-                                    .black.gradient
+                                    Color("backgroundColor").gradient
                                 )
                                 .frame(maxWidth: 107, maxHeight: 34)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 7)
                                 .stroke(lineWidth: 1)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color("borderColor"))
                                 .frame(maxWidth: 107, maxHeight: 34)
                         )
                 }
