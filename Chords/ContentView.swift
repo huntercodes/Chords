@@ -8,7 +8,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ChordsView()
+        NavigationView {
+            ChordsView()
+                .navigationTitle("Chords")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

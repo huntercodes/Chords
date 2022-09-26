@@ -19,13 +19,6 @@ struct ChordsView: View {
     
     var body: some View {
         VStack {
-            Text("Chords")
-                .font(.largeTitle)
-                .padding()
-            
-            Spacer()
-                .frame(height: 23)
-            
             Picker("Instrument", selection: $selectedInstrument) {
                 ForEach(instruments, id: \.self) {
                     Text($0.name.capitalized(with: nil))
@@ -45,10 +38,10 @@ struct ChordsView: View {
                     .foregroundColor(Color("borderColor"))
                     .frame(maxWidth: 300, maxHeight: 74)
             )
-            .frame(maxWidth: 300, maxHeight: 87)
+            .frame(maxWidth: 300, maxHeight: 74)
             
             Spacer()
-                .frame(height: 7)
+                .frame(height: 3)
                 
             HStack {
                 Spacer()
