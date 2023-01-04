@@ -1,5 +1,7 @@
 # Chords
-Guitar and Ukulele Chords, built with SwiftUI. (iOS 16+)
+Guitar and Ukulele Chords
+
+Built with SwiftUI. (iOS 16+)
 
 ###
 
